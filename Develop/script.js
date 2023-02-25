@@ -21,3 +21,59 @@ $(function () {
   //
   // TODO: Add code to display the current date in the header of the page.
 });
+
+var textarea = document.querySelector('#textarea');
+var saveBtn = document.querySelector('#save');
+
+var textarea = localStorage.getItem("textarea");
+
+textarea.textContent = coffee;
+
+saveBtn.addEventListener("click", function() {
+  if (count < 24) {
+    count++;
+    counter.textContent = count;
+    localStorage.setItem("count", count);
+  }
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // function updateClock() {
+        //   var now = newDate();
+        //   var dname = now.getDay(),
+        //       mo = now.getMonth(),
+        //       dnum = now.getDate(),
+        //       yr = now.getFullYear(),
+        //       hou = now.getHours(),
+        //       min = now.getMinutes(),
+        //       sec = now.getSeconds(),
+        //       pe = "AM";
+
+        //       var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+        //       var week = ["Sunday", "Monday", "Tueday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        //       var ids = ["dayname", "month", "daynum", "year", "hour", "minutes", "seconds", "period"];
+        //       var values = [week[dname], mo, dnum, yr, hou, min, sec, pe];
+        //       for (var i = 0; i < ids.length; i++)
+        //       document.getElementById(ids[i]).firstChild.nodeValue = values[i];
+        // }
+
+        // function initClock() {
+        //   updateClock();
+        //   window.setInterval("updateClock()", 1000);
+        // }

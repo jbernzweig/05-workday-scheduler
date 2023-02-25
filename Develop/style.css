@@ -12,6 +12,15 @@ textarea {
   padding: 10px;
 }
 
+.datetime .date {
+  height: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  font-family: Arial, Helvetica, sans-serif
+}
+
 .description {
   white-space: pre-wrap;
 }
