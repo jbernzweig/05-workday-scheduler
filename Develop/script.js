@@ -6,25 +6,29 @@
 // })
 
 // // Need to take values from time & value divs and save them to local storage.
-// var task = document.getElementById("task");
-// var saveButton = document.getElementById("save");
+var task = document.getElementById("task");
+var saveButton = document.getElementById("save");
 
-// saveButton.addEventListener("click", function(event) {
-//   event.preventDefault();
+saveButton.addEventListener("click", function(event) {
+  event.preventDefault();
 
-// var morningCoffee = {
-//   task: task.value,
-// }
+var morningCoffee = {
+  task: task.value,
+}
 
-// localStorage.setItem("morningCoffee", JSON.stringify(morningCoffee));
-// renderMessage();
+localStorage.setItem("morningCoffee", JSON.stringify(morningCoffee));
+renderMessage();
 
-// });
+});
 
-// localStorage.setItem("morningCoffee", JSON.stringify(morningCoffee));
-//   if (localStorage.getItem("morningCoffee")) {
-//     document.querySelector("#task").value = localStorage.getItem("morningCoffee");
-//   }
+localStorage.setItem("morningCoffee", JSON.stringify(morningCoffee));
+  if (localStorage.getItem("morningCoffee")) {
+    document.querySelector("#task").value = localStorage.getItem("morningCoffee");
+  }
+
+// current day begin 
+
+// current day end
 
 // digital clock begin
   $(document).ready(function() {
@@ -34,7 +38,6 @@
   
   function clockUpdate() {
     var date = new Date();
-    // $('.digital-clock').css({'color': '#fff', 'text-shadow': '0 0 6px #ff0'});
     function addZero(x) {
       if (x < 10) {
         return x = '0' + x;
@@ -60,11 +63,6 @@
     $('.digital-clock').text(h + ':' + m + ':' + s)
   }
 // digital clock end
-
-
-
-
-
 
 
 // // TODO: Add a listener for click events on the save button. This code should
@@ -94,31 +92,3 @@
 //   //
 //   // TODO: Add code to display the current date in the header of the page.
 // });
-
-
-
-//         // function updateClock() {
-//         //   var now = newDate();
-//         //   var dname = now.getDay(),
-//         //       mo = now.getMonth(),
-//         //       dnum = now.getDate(),
-//         //       yr = now.getFullYear(),
-//         //       hou = now.getHours(),
-//         //       min = now.getMinutes(),
-//         //       sec = now.getSeconds(),
-//         //       pe = "AM";
-
-//         //       var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-//         //       var week = ["Sunday", "Monday", "Tueday", "Wednesday", "Thursday", "Friday", "Saturday"];
-//         //       var ids = ["dayname", "month", "daynum", "year", "hour", "minutes", "seconds", "period"];
-//         //       var values = [week[dname], mo, dnum, yr, hou, min, sec, pe];
-//         //       for (var i = 0; i < ids.length; i++)
-//         //       document.getElementById(ids[i]).firstChild.nodeValue = values[i];
-//         // }
-
-//         // function initClock() {
-//         //   updateClock();
-//         //   window.setInterval("updateClock()", 1000);
-//         // }
-
-// console.log(dayjs())
